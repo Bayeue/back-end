@@ -2,7 +2,6 @@ package mysql_users
 
 import (
 	domain_users "ppob/users/domain"
-	"time"
 
 	"gorm.io/gorm"
 )
@@ -22,7 +21,6 @@ type Users struct {
 
 func toDomain(rec Users) domain_users.Users {
 	return domain_users.Users{
-		ID:         rec.ID,
 		Name:       rec.Name,
 		Slug:       rec.Slug,
 		Email:      rec.Email,
@@ -31,7 +29,5 @@ func toDomain(rec Users) domain_users.Users {
 		Status:     rec.Status,
 		Address_Id: rec.Address_Id,
 		Role:       rec.Role,
-		CreatedAt:  time.Time{},
-		UpdatedAt:  time.Time{},
 	}
 }

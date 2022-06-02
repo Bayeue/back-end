@@ -11,19 +11,6 @@ type UsersRepo struct {
 	DB *gorm.DB
 }
 
-// GetById implements domain_users.Repository
-func (ur UsersRepo) GetById(id int) (domain_users.Users, error) {
-	rec := Users{}
-	err := ur.DB.Where("id=?", id).First(&rec).Error
-	return toDomain(rec), err
-}
-
-// Store implements domain_users.Repository
-func (ur UsersRepo) Store(domain domain_users.Users) (int, error) {
-	err := ur.DB.Save(&domain).Error
-	return domain.ID, err
-}
-
 func NewUsersRepo(db *gorm.DB) domain_users.Repository {
 	return UsersRepo{
 		DB: db,

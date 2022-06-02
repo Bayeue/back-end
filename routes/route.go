@@ -16,5 +16,5 @@ func (cl *ControllerList) RouteRegister(e *echo.Echo) {
 
 	// product public
 	e.POST("/login", cl.UserHandler.Authorization)
-	e.POST("/register", cl.UserHandler.Register)
+
 }

@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"net/http"
 	domain_users "ppob/users/domain"
-	"ppob/users/handler/request"
 	request_users "ppob/users/handler/request"
 
 	"github.com/labstack/echo/v4"
@@ -45,29 +44,4 @@ func (uh *UsersHandler) Authorization(ctx echo.Context) error {
 			"token": res,
 		},
 	})
-}
-
-func (uh *UsersHandler) Register(ctx echo.Context) error {
-	req := request.RequestJSON{}
-	if err := ctx.Bind(&req); err != nil {
-		return ctx.JSON(http.StatusBadRequest, map[string]interface{}{
-			"message": "bad request",
-			"rescode": http.StatusBadRequest,
-		})
-
-	}
-	responseData, err := uh.usecase.Register(request.ToDomain(req))
-	if err != nil {
-		return ctx.JSON(http.StatusBadRequest, map[string]interface{}{
-			"message": "bad request",
-			"rescode": http.StatusBadRequest,
-		})
-	}
-
-	return ctx.JSON(http.StatusOK, map[string]interface{}{
-		"message": "success",
-		"rescode": http.StatusOK,
-		"data":    responseData,
-	})
-
 }
