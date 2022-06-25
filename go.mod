@@ -8,7 +8,9 @@ require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/gosimple/slug v1.12.0
 	github.com/labstack/echo/v4 v4.7.2
+	github.com/pborman/uuid v1.2.1
 	github.com/stretchr/testify v1.7.0
+	github.com/xendit/xendit-go v1.0.8
 	github.com/xlzd/gotp v0.0.0-20220110052318-fab697c03c2c
 	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3
 	gorm.io/driver/mysql v1.3.4

@@ -163,10 +163,10 @@ func TestGetUserAccount(t *testing.T) {
 	})
 }
 
-func TestAddUserVerif(t *testing.T) {
-	panic("")
-}
+// func TestAddUserVerif(t *testing.T) {
+// 	panic("")
+// }
 
-func TestVerif(t *testing.T) {
-	panic("")
-}
+// func TestVerif(t *testing.T) {
+// 	panic("")
+// }
