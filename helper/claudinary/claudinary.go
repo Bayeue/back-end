@@ -2,7 +2,6 @@ package claudinary
 
 import (
 	"context"
-	"fmt"
 	"os"
 	"time"
 
@@ -43,8 +42,6 @@ func ImageUploadHelper(input interface{}, folderDetail string) (string, error) {
 		SECRETKEY:  os.Getenv("API_SECRET"),
 		FOLDERNAME: os.Getenv("UPLOAD_FOLDER"),
 	}
-	fmt.Println("conf", conf)
-	fmt.Println("input", input)
 
 	//create cloudinary instance
 	cld, err := cloudinary.NewFromParams(conf.CLOUDNAME, conf.APIKEY, conf.SECRETKEY)

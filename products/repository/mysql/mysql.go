@@ -181,7 +181,8 @@ func (pr ProductsRepo) StoreCategory(domain domain_products.Category_Product) er
 func (pr ProductsRepo) UpdateCategory(id int, domain domain_products.Category_Product) error {
 	var rec = Category_Product{}
 	newRecord := map[string]interface{}{
-		"Name": domain.Name,
+		"Name":  domain.Name,
+		"Image": domain.Image,
 	}
 	var err error
 	update := pr.DB.Model(&rec).Where("id = ?", id).Updates(newRecord).RowsAffected
