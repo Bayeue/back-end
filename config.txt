@@ -1,7 +1,7 @@
 DBNAME=db_bayeue
 DBUSER=root
 DBPASS=root
-DBHOST=host.docker.internal
+DBHOST=my-mysql.internal
 DBPORT=33006
 
 JWTSecret=bayeue_secret

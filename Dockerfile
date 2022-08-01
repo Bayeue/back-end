@@ -15,6 +15,4 @@ COPY --from=builder /app/api /app/
 
 WORKDIR /app
 
-EXPOSE 8080
-
-CMD ["./api"]
+CMD ["./api", "0.0.0.0"]
