@@ -55,6 +55,7 @@ func Xendit_Invoice(DetailTransaction domain_transaction.Detail_Transaction, pro
 		Customer:                       invoiceCustomer,
 		Fees:                           []xendit.InvoiceFee{fee},
 		CustomerNotificationPreference: customerNotificationPreference,
+		SuccessRedirectURL:             "https://google.com",
 		// success redirect di mobile
 		// SuccessRedirectURL: ,
 	}
