@@ -25,7 +25,7 @@ func Mailjet(data []byte) {
 
 	req, _ := http.NewRequest("POST", url, bytes.NewBuffer(data))
 
-	basic := base64.StdEncoding.EncodeToString([]byte("177a3a51988d43f5512cf71bff810623" + ":" + "ba69cb7437c1bad179c8af199ba33dd1"))
+	basic := base64.StdEncoding.EncodeToString([]byte("177a3a51988d43f5512cf71bff810623" + ":" + "0ae5670198a5119bb03593478a4affd7"))
 
 	req.Header.Add("Authorization", "Basic "+basic)
 
